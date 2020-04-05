@@ -1,0 +1,30 @@
+  
+{% load staticfiles %}
+
+  <nav class="#ff8a65 deep-orange lighten-2">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo"><i class="material-icons"></i>
+           
+<img src = "{% static 'final.png' %}" height="60" width="70">
+        </a> 
+        <font size="6" style='padding-left:90px;'>Be a Learner</font>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required name ='q'>
+              <label class="label-icon" for="search"><font style="color: white">search</font></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </li>
+        {% if user.is_authenticated %}
+             <li><a href="#">{{user.username|title}}</a></li>
+             <li><a href="/logout">Logout</a></li>
+        {% else %}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        {% endif %}
+    </div>
+  </nav>

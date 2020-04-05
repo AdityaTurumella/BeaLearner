@@ -1,0 +1,13 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+
+    <div class="row">
+        {% for tut in t %}
+            <div class="col s12 m6 l4">
+                   {{tut.tutorial_content|safe}}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

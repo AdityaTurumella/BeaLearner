@@ -1,0 +1,15 @@
+{% extends 'main/header.html' %}
+{% block content %}
+<div class='container'>
+	<div class="card-panel lighten-2  hoverable">
+    <form method='POST'>
+        {%csrf_token%}
+        {{form.as_p}}
+        <br>
+        <button  class ='btn' type="submit" >Register</button>
+    </form>
+     If You already had an account ,<a href="/login"><strong>Login</strong></a> instead.
+</div>
+</div>
+{% endblock %}
+ 
