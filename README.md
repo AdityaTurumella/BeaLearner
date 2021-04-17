@@ -1,4 +1,3 @@
 # BeaLearner
-Build with the help of django tutorials of "SENTDEX"
-
+A blog website build using Django FrameWork
 http://bealearner1.pythonanywhere.com/
